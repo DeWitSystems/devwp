@@ -83,6 +83,11 @@ if ( ! function_exists( 'devwp_setup' ) ) :
 endif;
 add_action( 'after_setup_theme', 'devwp_setup' );
 
+function devwp_add_editor_style() {
+	devwp_add_editor_style('dist/css/editor-style.css');
+}
+add_action('admin_init', 'devwp_add_editor_style');
+
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
  *
@@ -94,7 +99,7 @@ function devwp_content_width() {
 	// This variable is intended to be overruled from themes.
 	// Open WPCS issue: {@link https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards/issues/1043}.
 	// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
-	$GLOBALS['content_width'] = apply_filters( 'devwp_content_width', 640 );
+	$GLOBALS['content_width'] = apply_filters( 'devwp_content_width', 1140 );
 }
 add_action( 'after_setup_theme', 'devwp_content_width', 0 );
 
