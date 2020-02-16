@@ -113,7 +113,7 @@ function devwp_scripts() {
 	'/dist/css/bootstrap.min.css');
 	
 	wp_enqueue_style('devwp-fontawesome' , get_template_directory_uri() . 
-	'/fonts/font-awesome/css/font-awesome.min.css' );
+	'/fonts/font-awesome/css/fontawesome.min.css' );
 	
 	wp_enqueue_style( 'devwp-style', get_stylesheet_uri() );
 
